@@ -12,19 +12,8 @@ import br.com.clientes.projeto.repository.ClienteRepository;
 @SpringBootApplication
 public class clientesApplication {
 	
-	@Bean
-	public CommandLineRunner run( @Autowired ClienteRepository repository) {
-		return args ->{
-			Cliente cliente = new Cliente();
-			
-			cliente.setCpf("20393874834783");
-			cliente.setNome("fulano de Tal pereira");
-			repository.save(cliente);
-			
-			System.out.println(cliente);
-			
-		};
-	}
+	
+	
 
 	public static void main(String[] args) {
 		SpringApplication.run(clientesApplication.class, args);
